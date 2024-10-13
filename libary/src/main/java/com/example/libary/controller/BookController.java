@@ -50,7 +50,6 @@ public class BookController {
     }
     book.setCategories(categories);
 
-
     return new ResponseEntity<>(bookService.addNewBook(book) , HttpStatus.CREATED);
   }
 
@@ -88,6 +87,7 @@ public class BookController {
     }
     book.setCategories(categories);
 
+    bookService.addNewBook(book);  
     return ResponseEntity.ok(book);
   }
 
