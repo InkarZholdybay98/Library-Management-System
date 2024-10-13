@@ -87,6 +87,7 @@ public class BookController {
     }
     book.setCategories(categories);
 
+    book.setId(id);
     bookService.addNewBook(book);  
     return ResponseEntity.ok(book);
   }
